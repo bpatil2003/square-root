@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<title> square app </title>
+<style>
+*{font-size:60px;}
+body{background-color:lightblue;}
+</style>
+<script>
+function compute()
+{
+event.preventDefault();
+let num=document.getElementById("num");
+let msg=document.getElementById("msg");
+let n=parseFloat(num.value);
+let r=n*n;
+msg.innerHTML="Square = "+r.toFixed(2);
+}
+</script>
+</head>
+<body>
+<center>
+<h1> Square App </h1>
+<form onsubmit="compute()">
+<input type ="number" step="any" placeholder="enter number" id="num" required/>
+<br><br>
+<input type="submit" value="Find square"/>
+</form>
+<h2 id="msg"/>
+</center>
+</body>
+</html>
